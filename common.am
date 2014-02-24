@@ -1,0 +1,10 @@
+MAINTAINERCLEANFILES = Makefile.in
+
+# Note: This must always be the last one in *_VALAFLAGS,
+# because the -g needs to be at the end of VALAFLAGS to not break make dist.
+BLANK_COMMON_VALAFLAGS = \
+    $(BLANK_COMMON_VALAFLAGS_PKG) \
+    $(BLANK_DEBUG_VALAFLAGS)
+
+vala-clean:
+    rm -f `find . -name "*.stamp"`

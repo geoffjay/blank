@@ -1,4 +1,4 @@
 blank
 =====
 
-Blank application to test some application concepts using GLib and Vala.
+Blank application to test various concepts using GLib and Vala.

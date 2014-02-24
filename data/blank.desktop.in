@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Blank
+Comment=Blank application to test concepts
+Version=0.1
+GenericName=Blank
+TryExec=blank
+Exec=blank
+Icon=blank
+Type=Application
+Categories=Utility;
+MimeType=application/x-blank;
+
+_Keywords=Test

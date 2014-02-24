@@ -1,0 +1,145 @@
+@define-color blank_bg_color shade (@theme_bg_color, 0.5);
+@define-color blank_bg2_color mix (@theme_bg_color, @blank_bg_color, 0.5);
+@define-color blank_selected_color #3465a4;
+
+#CollectionLabel {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.separator {
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-separator-height: 1;
+}
+
+.sidebar GtkTreeView:selected {
+    background-color: @blank_selected_color;
+    border-width: 2px 8px 2px 0;
+    border-color: transparent;
+    border-image-source: url("icons/blank-arrow.svg");
+    border-image-slice: 0 8 0 0;
+    border-image-width: 2px 8px 2px 0;
+    border-image-repeat: stretch;
+    border-style: solid;
+}
+
+.sidebar GtkTreeView {
+    -GtkTreeView-vertical-separator: 8;
+}
+
+.sidebar .cell {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.blank-bg {
+    background-color: transparent;
+    background-image: none;
+}
+
+.blank-property-name-label {
+    color: #bebebe;
+}
+
+.blank-machine-name-label {
+    color: white;
+}
+
+.blank-step-label {
+    color: #989898;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.blank-logo-notice-label {
+    color: #989898;
+    font-style: italic;
+}
+
+.blank-source-label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.blank-graph-label {
+    font-size: 8px;
+    font-family: monospace;
+    color: #989898;
+}
+
+.blank-source-nb {
+    background-color: alpha(#fff, 0.0);
+}
+
+.blank-selected {
+    background-color: @blank_selected_color;
+}
+
+.blank-continue {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@blank_selected_color),
+                                     to (darker (@blank_selected_color)));
+}
+
+.blank-continue:insensitive {
+    background-image: none;
+}
+
+/* Ensure the viewport is transparent so the background don't
+   show through the rounded corners */
+.blank-menu GtkViewport {
+    background-image: none;
+    background-color: transparent;
+    border-style: none;
+}
+
+.blank-menu-row {
+    -GtkWidget-focus-line-width: 0;
+    border-style: ridge none none none;
+    border-color: shade (@blank_bg2_color, 0.7);
+    border-width: 2px 0 0 0;
+    box-shadow: none;
+    border-image: none;
+    background-image: none;
+    background-color: @blank_bg2_color;
+    border-radius: 0;
+}
+
+.blank-menu-row:nth-child(first) {
+    border-radius: 15px 15px 0 0;
+    border-style: none;
+}
+
+.blank-menu-scrolled .blank-menu-row:nth-child(first) {
+    border-radius: 0;
+}
+
+.blank-menu > .blank-menu-row:nth-child(last) {
+    border-radius: 0 0 15px 15px;
+}
+
+.blank-menu-row:prelight, .blank-menu-row:focus {
+    background-color: shade (@blank_bg2_color, 1.2);
+}
+
+.blank-menu-row:active {
+    background-color: @theme_selected_bg_color;
+}
+
+.blank-menu-row *:active {
+    color: #ffffff;
+}
+
+.blank-toplevel {
+    background-color: @theme_bg_color;
+}
+
+.blank-empty-image {
+    color: #2e3436;
+    icon-shadow: 0 -1px rgba(0,0,0,0.5);
+}
+
+.blank-empty-details-label {
+    color: #555753;
+}
