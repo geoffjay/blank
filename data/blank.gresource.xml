@@ -2,5 +2,8 @@
 <gresources>
   <gresource prefix="/org/example/blank">
     <file>gtk-style.css</file>
+    <file>icons/blank-arrow.png</file>
+    <file>icons/blank-dark.png</file>
+    <file>icons/blank-gray.png</file>
   </gresource>
 </gresources>
