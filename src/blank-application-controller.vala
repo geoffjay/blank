@@ -43,7 +43,7 @@ public class Blank.ApplicationController : GLib.Object {
             } else {
                 /* XXX not sure, might need to disconnect in future if this is
                  *     meant to keep the view open */
-                (view as GLib.Application).quit ();
+                //(view as GLib.Application).quit ();
             }
         }
     }
@@ -65,7 +65,7 @@ public class Blank.ApplicationController : GLib.Object {
                 });
             } else {
                 /* XXX should perform a clean shutdown of the interface - fix */
-                (view as GLib.Application).quit ();
+                //(view as GLib.Application).quit ();
             }
         }
     }

@@ -75,7 +75,7 @@ public interface Blank.Application : GLib.Object {
      */
     public abstract signal void closed ();
 
-    public abstract void shutdown ();
+    public abstract int launch (string[] args);
 
     /**
      * The methods startup, activate, and command_line need to be overridden in
