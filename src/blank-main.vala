@@ -55,14 +55,9 @@ public int main (string[] args) {
     });
 
     /* Launch the application */
-    try {
-        status = (app as GLib.Application).run (args);
-    } catch (GLib.Error e) {
-        stdout.printf ("Error: %s\n", e.message);
-        return 0;
-    }
+    status = app.launch (args);
 
-    app.shutdown ();
+    //app.shutdown ();
 
     return status;
 }

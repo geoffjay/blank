@@ -1,0 +1,9 @@
+*.swp
+
+Makefile
+Makefile.in
+
+*.c
+!resources.c
+
+*.o

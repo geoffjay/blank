@@ -28,6 +28,7 @@ UI_SOURCES = \
 #	--gresources $(gresource_file)
 
 blank_VALAFLAGS = \
+	$(VALAFLAGS) \
 	--enable-experimental \
 	-H $(srcdir)/libblank.h -C -c --thread \
 	--vapidir=$(top_srcdir)/vapi \
@@ -46,14 +47,16 @@ blank_CFLAGS = \
 	$(GLIB_CFLAGS) \
 	$(GTK_CFLAGS) \
 	$(CLUTTER_CFLAGS) \
-	$(GEE_CFLAGS)
+	$(GEE_CFLAGS) \
+	$(GIO_CFLAGS)
 
 blank_LDADD = \
 	@PACKAGE_LIBS@ \
 	$(GLIB_LIBS) \
 	$(GTK_LIBS) \
 	$(CLUTTER_LIBS) \
-	$(GEE_LIBS)
+	$(GEE_LIBS) \
+	$(GIO_LIBS)
 
 blank_headers = \
 	common.h \
@@ -69,10 +72,6 @@ blank_SOURCES = \
 	blank-application-view.vala \
 	blank-cli-application.vala \
 	blank-cli-application-view.vala \
-	blank-clutter-widget.vala \
-	blank-container.vala \
-	blank-object.vala \
-	blank-page.vala \
 	blank-ui-application.vala \
 	blank-ui-application-view.vala \
 	blank-utility.vala \

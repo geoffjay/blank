@@ -78,6 +78,10 @@ PKG_CHECK_MODULES([GEE], [gee-1.0],
 	[VALAPACKAGES="$VALAPACKAGES --pkg gee-1.0"],
 	[AC_MSG_ERROR([gee is required])])
 
+PKG_CHECK_MODULES([GIO], [gio-2.0],
+	[VALAPACKAGES="$VALAPACKAGES --pkg gio-2.0"],
+	[AC_MSG_ERROR([gio is required])])
+
 dnl Package setup for Vala files
 AC_SUBST(VALAPACKAGES)
 
