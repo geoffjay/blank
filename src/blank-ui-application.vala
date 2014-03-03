@@ -60,7 +60,6 @@ public class Blank.UI.Application : Gtk.Application, Blank.Application {
 
         message ("Creating view");
         view = new Blank.UI.ApplicationView (model);
-        //(view as Gtk.Window).application = this;
         assert (view != null);
 
         message ("Creating controller");
@@ -104,9 +103,10 @@ public class Blank.UI.Application : Gtk.Application, Blank.Application {
 
         Gtk.Window.set_default_icon_name ("blank");
         Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
+        (view as Gtk.Window).application = this;
 
         /* Moved view stuff here to test something */
-        (view as Gtk.ApplicationWindow).show_menubar = false;
+        //(view as Gtk.ApplicationWindow).show_menubar = false;
         (view as Gtk.ApplicationWindow).maximize ();
         (view as Gtk.ApplicationWindow).show_all ();
 

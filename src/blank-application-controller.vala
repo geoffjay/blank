@@ -59,10 +59,12 @@ public class Blank.ApplicationController : GLib.Object {
                  *_ui.admin = admin;
                  *_ui.closed.connect ();
                  */
-                (view as Blank.UI.Application).save_requested.connect (save_requested_cb);
-                (view as Blank.UI.Application).closed.connect (() => {
-                    (view as GLib.Application).quit ();
-                });
+                /*
+                 *(view as Blank.UI.Application).save_requested.connect (save_requested_cb);
+                 *(view as Blank.UI.Application).closed.connect (() => {
+                 *    (view as GLib.Application).quit ();
+                 *});
+                 */
             } else {
                 /* XXX should perform a clean shutdown of the interface - fix */
                 //(view as GLib.Application).quit ();
